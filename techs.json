@@ -1,0 +1,18 @@
+[
+    {
+        "key": "tech 1",
+        "skill_level": 1
+    },
+    {
+        "key": "tech 2",
+        "skill_level": 2
+    },
+    {
+        "key": "tech 3",
+        "skill_level": 3
+    },
+    {
+        "key": "tech 4",
+        "skill_level": 4
+    }
+]
