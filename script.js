@@ -8,16 +8,40 @@ let calendar = [
   [[], [], [], []],
 ];
 let overflow = [];
+
+function clearData() {
+  for (let k = 0; k < 5; k++) {
+    //check prerequisites
+    for (let j = 0; j < 4; j++) {
+      document.getElementById(`${k}${j}`).innerHTML = "";
+      document.getElementById("jobs").innerHTML = "";
+      document.getElementById("techs").innerHTML = "";
+      document.getElementById("overflow").innerHTML = "";
+    }
+  }
+}
+
 function fillCalendar() {
   fetch("./jobs.json")
     .then((response) => response.json())
     .then((jobs) => {
-      // console.table(jobs);
-
       fetch("./techs.json")
         .then((response) => response.json())
         .then((techs) => {
           // console.table(techs);
+
+          let jobsRandom = "";
+
+          for (let i = jobs.length - 1; i > 0; i--) {
+            const j = Math.floor(Math.random() * (i + 1));
+            const temp = jobs[i];
+            // Swap
+            jobs[i] = jobs[j];
+            jobs[j] = temp;
+          }
+          jobsRandom = jobs[0];
+
+          //   console.log(jobsRandom);
 
           function schedualJob(job) {
             // Conditions
