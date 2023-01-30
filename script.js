@@ -22,16 +22,15 @@ function clearData() {
 }
 
 function fillCalendar() {
+  document.getElementById("fillButton").disabled = true;
   fetch("./jobs.json")
     .then((response) => response.json())
     .then((jobs) => {
       fetch("./techs.json")
         .then((response) => response.json())
         .then((techs) => {
-          // console.table(techs);
-
+          // Randomize Job Order
           let jobsRandom = "";
-
           for (let i = jobs.length - 1; i > 0; i--) {
             const j = Math.floor(Math.random() * (i + 1));
             const temp = jobs[i];
@@ -40,8 +39,6 @@ function fillCalendar() {
             jobs[j] = temp;
           }
           jobsRandom = jobs[0];
-
-          //   console.log(jobsRandom);
 
           function schedualJob(job) {
             // Conditions
@@ -102,7 +99,6 @@ function fillCalendar() {
                   }
                 }
                 //draw callendar
-
                 document.getElementById(`${k}${j}`).innerHTML = JSON.stringify(
                   calendar[k][j]
                 )

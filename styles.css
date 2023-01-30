@@ -30,8 +30,12 @@ button{
 .arrow{
 	color:rgb(0, 221, 0);
 }
-button:hover {
+button:hover:enabled {
 	background-color:rgb(201, 201, 201);
+}
+
+button:disabled .arrow {
+color: rgb(175, 175, 175);
 }
 .divTable{
 	display: table;
