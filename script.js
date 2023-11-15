@@ -116,8 +116,14 @@ function fillCalendar() {
                   "\t"
                 )
                   .replace(/[{]+/g, "<br>")
-                  .replace(/"key"+/g, "<hr>")
-                  .replace(/['",:{}[]+/g, "");
+                  .replace(/"key"+/g, "<p>")
+                  .replace(/job+/g, "<strong>Name&#58;</strong> Job")
+                  .replace(/location+/g, "<strong>Location&#58;</strong>")
+                  .replace(/skill_level+/g, "<strong>Skill Level&#58;</strong>")
+                  .replace(/time+/g, "<strong>Time&#58;</strong>")
+
+                  .replace(/['":{}[]+/g, "")
+                  .replace(/,+/g, "<br>");
 
                 document.getElementById("techs").innerHTML = JSON.stringify(
                   techs,

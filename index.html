@@ -33,8 +33,15 @@
     </div>
     <div class="section">
         <h2>Live Schedule Demo</h2> 
+
+        
         <button id="fillButton" onclick="fillCalendar();">Fill Calendar <span class="arrow">▶</span></button>
         <button onClick="window.location.reload();">Clear <span class="x">x</span></button>
+        <div class="section"> 
+            <h3>Calls</h3>
+            <p>A list of calls that must be scheduled in the order recieved</p>
+            <p  id="jobs" class="jobs"></p>
+        </div>
         <div class="divTable">
            
             <div class="divTableBody">
@@ -83,22 +90,21 @@
             </div>
             </div>
         </div>
-    <div class="section"> 
+    <div class="section" > 
         <h3>Techs</h3>
+        <p>A list of technicians avalable to be scheduled with the skill level each posseses</p>
         <p  id="techs"></p>
     </div>
-    <div class="section"> 
-        <h3>Jobs</h3>
-        <p  id="jobs"></p>
-    </div>
+   
 
     
         <div class="section"> 
             <h3>Overflow</h3>
+            <p>A list of calls that have no room on the current weeks schedule</p>
             <p  id="overflow"></p>
         </div>
         <div class="section" > 
-            <h3>JavaScript Code</h3>
+            <!-- <h3>JavaScript Code</h3> -->
             <p  id="scrips"></p>
         </div>
         <script src="script.js" type="text/javascript"></script>

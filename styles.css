@@ -40,8 +40,21 @@ color: rgb(175, 175, 175);
 .divTable{
 	display: table;
 	width: 100%;
-	
-	
+}
+
+.jobs{
+	display: flex;
+	border: 1px solid black;
+	flex-wrap: wrap;
+	gap: 1.5rem;
+}
+.jobs p {
+width: 100px;
+align-self: center;
+line-height: 1.5rem;
+
+
+
 }
 .divTableRow {
 	display: table-row;

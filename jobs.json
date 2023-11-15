@@ -210,5 +210,11 @@
     "location": 132,
     "skill_level": 2,
     "time": 4
-    }
+    },
+    {
+        "key": "job36",
+        "location": 50,
+        "skill_level": 1,
+        "time": 1
+        }
 ]
